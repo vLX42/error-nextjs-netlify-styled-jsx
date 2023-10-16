@@ -1,0 +1,18 @@
+[[plugins]]
+package = "@netlify/plugin-nextjs"
+
+[build]
+command = "npm run build:prod"
+publish = "build"
+
+[functions]
+
+  [functions.___netlify-handler]
+  included_files = [
+    "./public/**"
+  ]
+
+  [functions."_api_*"]
+  included_files = [
+    "./public/**"
+  ]
